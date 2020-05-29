@@ -1,0 +1,67 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="02_CRUDWithDetailsViewUsingCustomLinksDemo.aspx.cs" Inherits="_01_CRUDWithDetailsViewUsingBoundFieldsDemo" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None" Height="305px" OnPageIndexChanging="DetailsView1_PageIndexChanging" Width="367px" DataKeyNames="EmployeeId" OnItemDeleting="DetailsView1_ItemDeleting" OnItemInserting="DetailsView1_ItemInserting" OnItemUpdating="DetailsView1_ItemUpdating" OnModeChanging="DetailsView1_ModeChanging" OnItemCommand="DetailsView1_ItemCommand">
+                <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                <EditRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                <Fields>
+                    <asp:BoundField HeaderText="Employee ID" DataField="EmployeeId" />
+                    <asp:BoundField HeaderText="Last Name" DataField="LastName" />
+                    <asp:BoundField HeaderText="First Name" DataField="FirstName" />
+                    <asp:BoundField HeaderText="Title" DataField="Title" />
+                    <asp:BoundField HeaderText="Title Of Courtesy" DataField="TitleOfCourtesy" />
+                    <asp:TemplateField>
+                         <InsertItemTemplate>
+         <asp:linkbutton id="btnInsert" 
+                           runat="server" commandname="Insert"
+             text="Insert" ForeColor="White" />
+
+              <asp:linkbutton id="btnCancel" runat="server"
+                  causesvalidation="false" commandname="Cancel" 
+                                Text="Cancel" ForeColor="White" />
+
+                        </InsertItemTemplate>
+
+                         <EditItemTemplate>
+
+        <asp:linkbutton id="btnUpdate" runat="server" 
+                            commandname="Update" 
+            text="update" ForeColor="White" />
+
+					<asp:linkbutton id="btnCancel" runat="server" 
+                        causesvalidation="false" 
+                        commandname="Cancel" Text="Cancel" 
+                        ForeColor="White"  />
+                        </EditItemTemplate>
+
+                        <ItemTemplate>
+                            <asp:linkbutton id="btnEdit" runat="server" causesvalidation="false" 
+                commandname="Edit" text="Edit" />
+
+					<asp:linkbutton id="btnDelete" runat="server" 
+                        causesvalidation="false" commandname="Delete" 
+             OnClientClick="return confirm('Are you sure you want to delete?');" Text="Delete" />
+					
+                            <asp:linkbutton id="btnNew" runat="server" 
+                        causesvalidation="false" 
+                                commandname="New" text="New" />
+
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Fields>
+                <FooterStyle BackColor="Tan" />
+                <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+            </asp:DetailsView>
+        </div>
+    </form>
+</body>
+</html>

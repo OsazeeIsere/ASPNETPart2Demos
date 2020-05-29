@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Northwind">
+  <DataContextMoniker Name="/NorthwindDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="13b9e48d-f4cd-4224-b69c-7996b4c9d8c1" absoluteBounds="1.75, 0.5, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/NorthwindDBDataContext/Employees" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13eb95d6-0442-4d49-a3bb-c87e5b8bce64" absoluteBounds="1.7650000000000001, 0.96, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.45923076923077 : 4.96311686197917); (2.45923076923077 : 5.21311686197917); (3.05461538461538 : 5.21311686197917); (3.05461538461538 : 4.96311686197917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/NorthwindDBDataContext/Employees/Employee_Employee" />
+      <nodes>
+        <classShapeMoniker Id="13b9e48d-f4cd-4224-b69c-7996b4c9d8c1" />
+        <classShapeMoniker Id="13b9e48d-f4cd-4224-b69c-7996b4c9d8c1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
